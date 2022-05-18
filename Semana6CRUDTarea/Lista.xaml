@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Semana6CRUDTarea.Lista">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Lista de clientes"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <Label Text="Consumir web service Get" FontSize="20" HorizontalTextAlignment="Center">
+                </Label>
+                <Label x:Name="texto" Text="">
+                </Label>
+                <Button Text="Consultar"
+                x:Name="btnGet"
+                Clicked="btnGet_Clicked">
+                </Button>
+                <Button Text="Regresar"
+                x:Name="btnRegresar"
+                Clicked="btnRegresar_Clicked">
+                </Button>
+                <Button x:Name="btnNuevo" Text="Nuevo Registro" Clicked="btnNuevo_Clicked" />
+                <Button x:Name="btnActualizar" Text="Actualizar Registro" Clicked="btnActualizar_Clicked"/>
+                <Button x:Name="btnBorrar" Text="Borrar Datos" Clicked="btnBorrar_Clicked"/>
+                <ListView x:Name="MyListView" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Label x:Name="lblNombreCliente" Text="{Binding nombrecliente}">
+                                    </Label>
+                                    <Label x:Name="lblCorreoCliente" Text="{Binding correocliente}">
+                                    </Label>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Semana6CRUDTarea.VistaModificar">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Editar Datos"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="txtIdCliente" Placeholder="Ingrese el id del cliente" Keyboard="Numeric"/>
+
+            <Button Text="Consultar" x:Name="btnConsultar" Clicked="btnConsultar_Clicked"/>
+
+            <Entry x:Name="txtNombreCliente"  Placeholder="Ingrese el nombre del cliente"/>
+            <Entry x:Name="txtDireccionCliente"  Placeholder="Ingrese la direccion del cliente"/>
+            <Entry x:Name="txtCelularCliente"  Placeholder="Ingrese el numero de celular del cliente" Keyboard="Numeric"/>
+            <Entry x:Name="txtCorreoCliente"  Placeholder="Ingrese el correo del cliente"/>
+            <Entry x:Name="txtEstadoCliente"  Placeholder="Ingrese el estado del cliente" Keyboard="Numeric"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="btnModificar" Text="Modificar" Clicked="btnModificar_Clicked" Grid.Row="0" Grid.Column="0" />
+                <Button x:Name="btnRegresar" Text="Regresar" Clicked="btnRegresar_Clicked" Grid.Row="0" Grid.Column="1" />
+
+            </Grid>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

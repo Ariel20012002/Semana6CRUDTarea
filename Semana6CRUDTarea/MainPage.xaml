@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Semana6CRUDTarea.MainPage"
+             NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Ingresar Datos" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Entry x:Name="txtIdCliente" Placeholder="Ingrese el codigo" Keyboard="Numeric"/>
+            <Entry x:Name="txtNombreCliente"  Placeholder="Ingrese el nombre del cliente"/>
+            <Entry x:Name="txtDireccionCliente"  Placeholder="Ingrese la direccion del cliente"/>
+            <Entry x:Name="txtCelularCliente"  Placeholder="Ingrese el numero de celular del cliente" Keyboard="Numeric"/>
+            <Entry x:Name="txtCorreoCliente"  Placeholder="Ingrese el correo del cliente"/>
+            <Entry x:Name="txtEstadoCliente"  Placeholder="Ingrese el estado del cliente" Keyboard="Numeric"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+            <Button x:Name="btnIngresar" Text="Ingresar Datos" Grid.Row="0" Grid.Column="0" Clicked="btnIngresar_Clicked"/>
+            <Button x:Name="btnRegresar" Text="Regresar" Grid.Row="0" Grid.Column="1" Clicked="btnRegresar_Clicked"/>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
